@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AngularJS Seed Project</title>
+  <!-- build:cssvendor -->
+  <!-- endbuild -->
+
+  <!-- build:cssbundle -->
+  <link rel="stylesheet" href="assets/libraries/bulma/css/bulma.css" />
+  <link rel="stylesheet" href="assets/fonts/fonts.min.css" />
+  <link rel="stylesheet" href="assets/styles/style.min.css" />
+  <!-- endbuild -->
+</head>
+<body ng-app="QueueApp">
+  <div class="nav has-shadow">
+    <div class="container">
+      <div class="nav-left">
+        <span class="nav-item">Queue App</span>
+        <a class="nav-item is-tab" href="#!/admin">Admin</a>
+        <a class="nav-item is-tab" href="#!/display">Display</a>
+        <a class="nav-item is-tab" href="#!/">Dispatcher</a>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </div>
+
+  <!-- build:jsvendor -->
+  <script type="text/javascript" src="assets/libraries/angular/angular.min.js"></script>
+  <script type="text/javascript" src="assets/libraries/angular-route/angular-route.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:jsbundle -->
+  <script type="text/javascript" src="app/app.module.min.js"></script>
+  <script type="text/javascript" src="app/app.config.min.js"></script>
+
+  <script type="text/javascript" src="app/shared/queues/queues.service.min.js"></script>
+
+  <script type="text/javascript" src="app/components/dispatcher/dispatcher.component.min.js"></script>
+  <script type="text/javascript" src="app/components/dispatcher-item/dispatcherItem.component.min.js"></script>
+  <script type="text/javascript" src="app/components/dispatcher-form/dispatcherForm.component.min.js"></script>
+  <script type="text/javascript" src="app/components/display/display.component.min.js"></script>
+  <script type="text/javascript" src="app/components/admin/admin.component.min.js"></script>
+  <script type="text/javascript" src="app/components/operator/operator.component.min.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

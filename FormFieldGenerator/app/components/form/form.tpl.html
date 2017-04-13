@@ -1,0 +1,16 @@
+<div>
+  <h2>Form</h2>
+  <form name="myForm">
+    <field-form settings="$ctrl.textfield" model="$ctrl.data" errors="myForm[$ctrl.textfield.name].$error"></field-form>
+
+    <field-form settings="$ctrl.otherTextfield" model="$ctrl.data" errors="myForm[$ctrl.otherTextfield.name].$error"></field-form>
+
+    <field-form settings="$ctrl.textarea" model="$ctrl.data" errors="myForm[$ctrl.textarea.name].$error"></field-form>
+
+    <button ng-click="$ctrl.submit();">Submit</button>
+
+    <pre>
+      {{ myForm | json }}
+    </pre>
+  </form>
+</div>

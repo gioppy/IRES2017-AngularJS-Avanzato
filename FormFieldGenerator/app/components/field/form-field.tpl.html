@@ -1,0 +1,22 @@
+<div ng-if="$ctrl.settings.type === 'text'">
+  <input 
+  type="text" 
+  name="{{ $ctrl.settings.name }}" 
+  ng-model="$ctrl.model[$ctrl.settings.model]" 
+  ng-attr-ng-minlength="$ctrl.settings.validators.minlength" 
+  ng-attr-ng-maxlength="$ctrl.settings.validators.maxlength" 
+  ng-attr-ng-required="$ctrl.settings.validators.required" />
+
+  <div ng-messages="$ctrl.errors" ng-if="$ctrl.errors">
+    <p ng-repeat="(validator, message) in $ctrl.settings.errorMessages" ng-message="{{ validator }}">{{ message }}</p>
+  </div>
+
+</div>
+
+<div ng-if="$ctrl.settings.type === 'textarea'">
+  <textarea name="{{ $ctrl.settings.name }}" ng-model="$ctrl.model[$ctrl.settings.model]" ng-attr-ng-required="$ctrl.settings.validators.required"></textarea>
+
+  <div ng-messages="$ctrl.errors" ng-if="$ctrl.errors">
+    <p ng-repeat="(validator, message) in $ctrl.settings.errorMessages" ng-message="{{ validator }}">{{ message }}</p>
+  </div>
+</div>

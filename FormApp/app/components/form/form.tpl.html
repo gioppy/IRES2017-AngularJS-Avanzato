@@ -1,0 +1,30 @@
+<div class="content">
+  <h2 class="subtitle">Form Component</h2>
+</div>
+<form name="userForm">
+  <div class="field">
+    <label class="label" for="username">Username</label>
+    <input 
+    class="input" 
+    ng-class="{'is-success': userForm.username.$valid && userForm.username.$touched, 'is-danger': userForm.username.$invalid && userForm.username.$touched}" 
+    type="text" 
+    name="username" 
+    id="username" 
+    ng-model="user.username" 
+    minlength="3" 
+    maxlength="8" 
+    required />
+  </div>
+
+  <pre>
+    {{ userForm | json }}
+  </pre>
+
+  <p class="help is-danger" ng-show="userForm.username.$invalid && userForm.username.$touched">Il campo ha un errore</p>
+
+  <p class="help is-danger" ng-show="userForm.username.$error.minlength">Il nome utente deve essere più lungo di 3 caratteri</p>
+
+  <p class="help is-danger" ng-show="userForm.username.$error.maxlength">Il nome utente è troppo lungo</p>
+
+  <p class="help is-danger" ng-show="userForm.username.$error.required">Il campo è richiesto</p>
+</form>

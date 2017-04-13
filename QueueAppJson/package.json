@@ -1,0 +1,43 @@
+{
+  "name": "angular-seed",
+  "version": "1.0.0",
+  "description": "AngularJS seed project",
+  "main": "index.html",
+  "scripts": {
+    "start": "lite-server -c configs/bs-config.local.json",
+    "server": "lite-server -c configs/bs-config.json",
+    "db": "json-server --watch json-server/db.json --port 3002 --no-cors",
+    "dev": "gulp dev",
+    "dist": "gulp dist"
+  },
+  "author": "Giovanni Buffa",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-html-replace": "^1.6.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-notify": "^3.0.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "lite-server": "^2.2.2",
+    "run-sequence": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gioppy@github.com/gioppy/angularjs-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gioppy/angularjs-seed/issues"
+  },
+  "homepage": "https://github.com/gioppy/angularjs-seed#readme"
+}

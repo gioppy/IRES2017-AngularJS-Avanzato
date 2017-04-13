@@ -1,0 +1,26 @@
+<div class="card">
+  <header class="card-header">
+    <h2 class="card-header-title">Operator {{ $ctrl.data.operator }}</h2>
+  </header>
+  <div class="card-content">
+    <h3>Current number: {{ $ctrl.data.currentNumber }}</h3>
+    <p ng-hide="$ctrl.editQueue">{{ $ctrl.data.description }}</p>
+    <textarea ng-model="$ctrl.data.description" ng-show="$ctrl.editQueue" class="textarea"></textarea>
+  </div>
+  <div ng-if="!$ctrl.admin && !$ctrl.operator" class="card-footer">
+    <a class="card-footer-item" ng-click="$ctrl.handleGetTicket($ctrl.data)">Get ticket</a>
+  </div>
+  <div ng-if="$ctrl.admin" class="card-footer">
+    <a class="card-footer-item" ng-hide="$ctrl.editDelete" ng-href="#!/operator/{{$ctrl.data.operator}}">View</a>
+    <a class="card-footer-item" ng-click="$ctrl.editTicket()" ng-hide="$ctrl.editDelete">Edit</a>
+    <a class="card-footer-item" ng-click="$ctrl.deleteTicket($ctrl.data)" ng-hide="$ctrl.editDelete">Delete</a>
+  </div>
+  <div ng-show="$ctrl.editQueue" class="card-footer">
+    <a class="card-footer-item" ng-click="$ctrl.handleEditQueue($ctrl.data)">Save</a>
+    <a class="card-footer-item" ng-click="$ctrl.discardEditTicket()">Discard</a>
+  </div>
+  <div ng-if="$ctrl.operator" class="card-footer">
+    <p class="card-footer-item">Dispatched tickets: {{ $ctrl.data.dispatchedNumbers }}</p>
+    <a class="card-footer-item" ng-click="$ctrl.handleNextTicket($ctrl.data)">Next</a>
+  </div>
+</div>

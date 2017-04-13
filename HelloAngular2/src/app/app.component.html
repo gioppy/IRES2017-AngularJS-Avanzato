@@ -1,0 +1,4 @@
+<input type="text" name="name" [(ngModel)]="name" />
+<p>Hello {{ name }}</p>
+
+<app-user name="{{ user.firstname }}" (onUpdate)="updateName($event)"></app-user>

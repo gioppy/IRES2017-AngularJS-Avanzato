@@ -1,0 +1,56 @@
+<div class="content">
+  <h2 class="subtitle">Form Messages Component</h2>
+</div>
+<form name="userFormMessages" ng-submit="$ctrl.submitForm()" novalidate>
+  <div class="field">
+    <label class="label" for="username">Username</label>
+    <input 
+    class="input" 
+    ng-class="{'is-success': userFormMessages.username.$valid && userFormMessages.username.$touched, 'is-danger': userFormMessages.username.$invalid && userFormMessages.username.$touched}" 
+    type="text" 
+    name="username" 
+    id="username" 
+    ng-model="$ctrl.user.username" 
+    ng-model-options="{debounce: 250}" 
+    ng-minlength="3" 
+    ng-maxlength="8" 
+    required />
+  </div>
+
+  <div class="help is-danger" ng-messages="userFormMessages.username.$error">
+    <p class="help is-danger" ng-message="minlength">Il nome utente deve essere più lungo di 3 caratteri</p>
+
+    <p class="help is-danger" ng-message="maxlength">Il nome utente è troppo lungo</p>
+
+    <p class="help is-danger" ng-message="required">Il campo è richiesto</p>
+  </div>
+
+  <!--<div class="field">
+    <label class="label" for="age">Age</label>
+    <div class="control">
+      <div class="select">
+        <select name="age" id="age" ng-model="$ctrl.user.age">
+          <option ng-repeat="option in $ctrl.ages" value="{{ option.id }}">{{ option.name }}</option>
+        </select>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="field">
+    <label class="label" for="age">Age</label>
+    <div class="control">
+      <div class="select">
+        <select name="age" id="age" ng-model="$ctrl.user.age" ng-change="$ctrl.onSelectChange()" ng-options="option.name for option in $ctrl.ages track by option.id" required>
+          <option value="">Select one...</option>
+        </select>
+      </div>
+    </div>
+    <div ng-if="$ctrl.showOnChange">
+      <p>Show only on element with id 1!</p>
+    </div>
+  </div>
+
+  <div class="field">
+    <button class="button is-primary" ng-disabled="userFormMessages.$invalid">Submit</button>
+  </div>
+</form>

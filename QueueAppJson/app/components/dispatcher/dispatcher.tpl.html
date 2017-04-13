@@ -1,0 +1,7 @@
+<h1 class="title">Current queues</h1>
+<hr>
+<div class="columns">
+  <div class="column" ng-repeat="queue in $ctrl.queues | orderBy:'operator'"">
+    <dispatcher-item data="queue" on-ticket="$ctrl.onTicket($queue)"></dispatcher-item>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<h2 class="title">Add new queue</h2>
+<form ng-submit="$ctrl.handleNewQueue()">
+  <div class="field">
+    <label for="operator" class="label">Operator</label>
+    <div class="control">
+      <input class="input" type="number" name="operator" ng-model="$ctrl.queue.operator" id="operator" min="1" required />
+    </div>
+  </div>
+  <div class="field">
+    <label for="totalNumbers" class="label">Max numbers</label>
+    <div class="control">
+      <input class="input" type="number" name="totalNumbers" ng-model="$ctrl.queue.totalNumbers" id="totalNumbers" min="1" required />
+    </div>
+  </div>
+  <div class="field">
+    <label for="description" class="label">Descriptions</label>
+    <div class="control">
+      <textarea name="description" ng-model="$ctrl.queue.description" id="description" class="textarea"></textarea>
+    </div>
+  </div>
+  <button type="submit" class="button is-primary">Create new queue</button>
+</form>

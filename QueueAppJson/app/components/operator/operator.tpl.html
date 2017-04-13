@@ -1,0 +1,10 @@
+<h1 class="title">Operator: {{ $ctrl.operator }}</h1>
+<hr>
+<div class="columns" ng-if="$ctrl.queues.length > 0">
+  <div class="column" ng-repeat="queue in $ctrl.queues">
+    <dispatcher-item data="queue" is-operator="true" on-next="$ctrl.nextTicket($queue);"></dispatcher-item>
+  </div>
+  <div ng-show="$ctrl.queues.length == 0" class="column">
+    <p>There is no queues for this operator</p>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AngularJS Seed Project</title>
+  <!-- build:cssvendor -->
+  <link rel="stylesheet" href="assets/libraries/bulma/css/bulma.css" />
+  <!-- endbuild -->
+
+  <!-- build:cssbundle -->
+  <link rel="stylesheet" href="assets/fonts/fonts.min.css" />
+  <link rel="stylesheet" href="assets/styles/style.min.css" />
+  <!-- endbuild -->
+</head>
+<body ng-app="formApp">
+  <div class="section">
+    <div class="container">
+      <app-form></app-form>
+    </div>
+
+    <div class="container">
+      <app-form-messages></app-form-messages>
+    </div>
+  </div>
+
+  <!-- build:jsvendor -->
+  <script type="text/javascript" src="assets/libraries/angular/angular.min.js"></script>
+  <script type="text/javascript" src="assets/libraries/angular-messages/angular-messages.min.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:jsbundle -->
+  <script type="text/javascript" src="app/app.module.min.js"></script>
+  <script type="text/javascript" src="app/app.config.min.js"></script>
+
+  <script type="text/javascript" src="app/components/form/form.component.min.js"></script>
+
+  <script type="text/javascript" src="app/components/form-messages/form-messages.component.min.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

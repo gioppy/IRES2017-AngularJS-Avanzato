@@ -1,0 +1,39 @@
+{
+  "queues": [
+    {
+      "id": 1,
+      "operator": 1,
+      "currentNumber": 0,
+      "totalNumbers": 99,
+      "dispatchedNumbers": 0,
+      "description": "Donec ullamcorper nulla non metus auctor fringilla."
+    },
+    {
+      "id": 2,
+      "operator": 2,
+      "currentNumber": 2,
+      "totalNumbers": 5,
+      "dispatchedNumbers": 8,
+      "description": "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor."
+    },
+    {
+      "id": 3,
+      "operator": 4,
+      "currentNumber": 7,
+      "totalNumbers": 99,
+      "dispatchedNumbers": 5,
+      "description": "Donec id elit non mi porta gravida at eget metus."
+    },
+    {
+      "currentNumber": 1,
+      "dispatchedNumbers": 0,
+      "operator": 3,
+      "totalNumbers": 99,
+      "description": "This operator is made by admin.",
+      "id": 4
+    }
+  ],
+  "current": {
+    "id": 2
+  }
+}

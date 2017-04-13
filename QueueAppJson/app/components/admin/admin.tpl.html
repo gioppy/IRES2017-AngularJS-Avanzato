@@ -1,0 +1,9 @@
+<h1 class="title">Set or modify queues</h1>
+<hr>
+<div class="columns">
+  <div class="column" ng-repeat="queue in $ctrl.queues | orderBy:'operator'">
+    <dispatcher-item data="queue" is-admin="true" on-edit="$ctrl.onEdit($queue)" on-delete="$ctrl.onDelete($queue)"></dispatcher-item>
+  </div>
+</div>
+
+<dispatcher-form on-new-queue="$ctrl.onNewQueue($queue)"></dispatcher-form>
