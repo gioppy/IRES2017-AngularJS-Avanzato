@@ -1,0 +1,28 @@
+<div ng-repeat="list in $ctrl.models.lists">
+  <table>
+    <thead>
+      <th>Item</th>
+      <th>Label</th>
+    </thead>
+    <tbody dnd-list="list">
+      <tr ng-repeat="item in list" 
+      dnd-draggable="item" 
+      dnd-moved="list.splice($index, 1)" 
+      dnd-effect-allowed="move" 
+      dnd-selected="$ctrl.models.selected = item">
+        <td>{{ $index }}</td>
+        <td>{{ item.label }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!--<ul dnd-list="list">
+  <li 
+    ng-repeat="item in list" 
+    dnd-draggable="item" 
+    dnd-moved="list.splice($index, 1)" 
+    dnd-effect-allowed="move" 
+    dnd-selected="$ctrl.models.selected = item">{{ item.label }}</li>
+  </ul>-->
+</div>
+
+{{ $ctrl.models.lists | json }}

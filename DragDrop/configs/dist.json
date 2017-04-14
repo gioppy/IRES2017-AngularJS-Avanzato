@@ -1,0 +1,26 @@
+{
+  "htmlreplace": {
+    "cssvendor": "assets/libraries/vendor.min.css",
+    "cssbundle": "assets/styles/bundle.min.css",
+    "jsbundle": "app/bundle.min.js",
+    "jsvendor": "assets/libraries/vendor.min.js"
+  },
+  "bundle": {
+    "css": [
+      "assets/fonts/fonts.min.css",
+      "assets/styles/style.min.css"
+    ],
+    "js": [
+      "app/app.module.min.js",
+      "app/app.config.min.js",
+      "app/components/list/list.component.min.js"
+    ]
+  },
+  "vendor": {
+    "css": [],
+    "js": [
+      "assets/libraries/angular/angular.min.js",
+      "assets/libraries/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"
+    ]
+  }
+}
