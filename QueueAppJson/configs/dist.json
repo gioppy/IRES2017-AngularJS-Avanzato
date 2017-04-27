@@ -10,10 +10,25 @@
       "assets/fonts/fonts.min.css",
       "assets/styles/style.min.css"
     ],
-    "js": []
+    "js": [
+      "app/app.module.min.js",
+      "app/app.config.min.js",
+      "app/shared/queues/queues.service.min.js",
+      "app/components/dispatcher/dispatcher.component.min.js",
+      "app/components/dispatcher-item/dispatcherItem.component.min.js",
+      "app/components/dispatcher-form/dispatcherForm.component.min.js",
+      "app/components/display/display.component.min.js",
+      "app/components/admin/admin.component.min.js",
+      "app/components/operator/operator.component.min.js"
+    ]
   },
   "vendor": {
-    "css": [],
-    "js": []
+    "css": [
+      "assets/libraries/bulma/css/bulma.css"
+    ],
+    "js": [
+      "assets/libraries/angular/angular.min.js",
+      "assets/libraries/angular-route/angular-route.min.js"
+    ]
   }
 }
